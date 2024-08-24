@@ -158,23 +158,23 @@
         /* Back to Top Button */
         #back-to-top {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 30px;
+            right: 30px;
             background-color: #4a90e2;
             color: white;
             border: none;
             border-radius: 50%;
-            padding: 10px 15px;
+            padding: 15px;
             font-size: 18px;
-            display: none;
             cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none;
             z-index: 1000;
-            transition: opacity 0.3s ease-in-out;
+            transition: opacity 0.3s;
         }
 
         #back-to-top:hover {
-            background-color: #357ab8;
+            background-color: #357ab7;
         }
     </style>
 </head>
@@ -212,8 +212,8 @@
                     <h2>Über uns</h2>
                 </div>
                 <p>Wir sind ein Team von Entwicklern, die moderne und benutzerfreundliche Weblösungen erstellen. Unser Ziel ist es, Websites zu entwickeln, die sowohl ästhetisch ansprechend als auch funktional sind.</p>
-                <p>Mit einer Leidenschaft für Design und Technologie arbeiten wir daran, das Web zu einem besseren Ort zu machen, indem wir Lösungen entwickeln, die nicht nur
-           </article>
+                <p>Mit einer Leidenschaft für Design und Technologie arbeiten wir daran, das Web zu einem besseren Ort zu machen, indem wir Lösungen entwickeln, die nicht nur gut aussehen, sondern auch die Benutzererfahrung verbessern.</p>
+            </article>
         </section>
 
         <section id="blog">
@@ -245,6 +245,29 @@
     <footer>
         <p>&copy; 2024 PaperMod-Stil Website. Alle Rechte vorbehalten.</p>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Zurück nach oben">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Scroll-Event, um den "Back to Top"-Button anzuzeigen/verstecken
+        window.onscroll = function () {
+            const backToTopButton = document.getElementById('back-to-top');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        };
+
+        // Funktion, um nach oben zu scrollen, wenn der Button angeklickt wird
+        document.getElementById('back-to-top').addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
 </body>
 
 </html>
