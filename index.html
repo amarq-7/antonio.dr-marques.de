@@ -21,6 +21,19 @@
             color: white;
             padding: 20px;
             text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 5px;
+            font-weight: 300;
         }
 
         nav {
@@ -106,16 +119,28 @@
             color: #4a90e2;
         }
 
-        .post {
-            margin-bottom: 20px;
-            padding: 15px;
+        .blog-post {
+            display: flex;
+            margin-bottom: 30px;
+            padding: 20px;
             background-color: #f7f9fc;
             border-left: 5px solid #4a90e2;
             border-radius: 5px;
+            align-items: center;
+        }
+
+        .blog-post img {
+            max-width: 200px;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+
+        .blog-post-content {
+            flex: 1;
         }
 
         .post-title {
-            font-size: 1.5em;
+            font-size: 1.8em;
             margin-bottom: 10px;
             color: #333;
         }
@@ -123,36 +148,11 @@
         .post-meta {
             font-size: 0.9em;
             color: #777;
-            margin-bottom: 10px;
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            padding: 10px;
             margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1em;
         }
 
-        .contact-form button {
-            padding: 10px 20px;
-            background-color: #4a90e2;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s;
-        }
-
-        .contact-form button:hover {
-            background-color: #357abd;
+        .post p {
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -160,6 +160,7 @@
 <body>
     <header>
         <h1>PaperMod-Stil Website</h1>
+        <p>by Dein Name</p>
     </header>
 
     <nav>
@@ -199,15 +200,21 @@
                     <i class="fas fa-blog"></i>
                     <h2>Blog</h2>
                 </div>
-                <div class="post">
-                    <h3 class="post-title">Die Zukunft des Webdesigns</h3>
-                    <div class="post-meta">Veröffentlicht am 20. August 2024 von John Doe</div>
-                    <p>Das Webdesign entwickelt sich ständig weiter. Mit neuen Technologien wie künstlicher Intelligenz und fortschrittlichen CSS-Techniken wird die Zukunft des Webdesigns spannender als je zuvor.</p>
+                <div class="blog-post">
+                    <img src="https://via.placeholder.com/200" alt="Blog Bild">
+                    <div class="blog-post-content">
+                        <h3 class="post-title">Die Zukunft des Webdesigns</h3>
+                        <div class="post-meta">Veröffentlicht am 20. August 2024 von John Doe</div>
+                        <p>Das Webdesign entwickelt sich ständig weiter. Mit neuen Technologien wie künstlicher Intelligenz und fortschrittlichen CSS-Techniken wird die Zukunft des Webdesigns spannender als je zuvor.</p>
+                    </div>
                 </div>
-                <div class="post">
-                    <h3 class="post-title">10 Tipps für bessere UX</h3>
-                    <div class="post-meta">Veröffentlicht am 15. August 2024 von Jane Smith</div>
-                    <p>Eine gute Benutzererfahrung ist entscheidend für den Erfolg einer Website. In diesem Artikel geben wir Ihnen zehn praktische Tipps, um die UX Ihrer Website zu verbessern.</p>
+                <div class="blog-post">
+                    <img src="https://via.placeholder.com/200" alt="Blog Bild">
+                    <div class="blog-post-content">
+                        <h3 class="post-title">10 Tipps für bessere UX</h3>
+                        <div class="post-meta">Veröffentlicht am 15. August 2024 von Jane Smith</div>
+                        <p>Eine gute Benutzererfahrung ist entscheidend für den Erfolg einer Website. In diesem Artikel geben wir Ihnen zehn praktische Tipps, um die UX Ihrer Website zu verbessern.</p>
+                    </div>
                 </div>
             </article>
         </section>
@@ -218,13 +225,7 @@
                     <i class="fas fa-envelope"></i>
                     <h2>Kontakt</h2>
                 </div>
-                <p>Haben Sie Fragen oder möchten Sie mit uns arbeiten? Nutzen Sie das folgende Formular, um uns eine Nachricht zu senden:</p>
-                <form class="contact-form">
-                    <input type="text" placeholder="Ihr Name" required>
-                    <input type="email" placeholder="Ihre E-Mail" required>
-                    <textarea rows="5" placeholder="Ihre Nachricht" required></textarea>
-                    <button type="submit">Nachricht senden</button>
-                </form>
+                <p>Haben Sie Fragen oder möchten Sie mit uns arbeiten? Kontaktieren Sie uns gerne über unsere Social-Media-Kanäle oder per E-Mail.</p>
             </article>
         </section>
     </main>
